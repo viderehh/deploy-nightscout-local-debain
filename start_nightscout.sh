@@ -110,4 +110,4 @@ export LANGUAGE=en
 export SCALE_Y=log
 export EDIT_MODE=on
 
-npm start
+npm start bundle
