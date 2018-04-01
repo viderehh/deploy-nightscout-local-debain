@@ -5,7 +5,7 @@
 #
 #
 
-useradd support
+useradd scout
 cd /opt/
 apt update && apt upgrade -y
 apt install sudo git rsync curl -y
