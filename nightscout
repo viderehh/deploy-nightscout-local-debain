@@ -20,7 +20,7 @@ export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/
 DAEMON_PATH="/opt/cgm-remote-monitor"
 
 DAEMON=/usr/bin/sudo
-DAEMONOPTS="-u support /opt/start_nightscout.sh"
+DAEMONOPTS="-u scout /opt/start_nightscout.sh"
 NAME=nightscout
 DESC="nightscout local script"
 PIDFILE=/var/run/$NAME.pid
