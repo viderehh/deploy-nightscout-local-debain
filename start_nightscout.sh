@@ -3,7 +3,7 @@ cd /home/pi/cgm-remote-monitor
 
 # See https://github.com/nightscout/cgm-remote-monitor#environment for a description of the fields
 # Required by Nightscout, please edit
-export CUSTOM_TITLE="my site name"
+export CUSTOM_TITLE="viderehh"
 export API_SECRET=my_12_characters_or_more_password
 
 # 
@@ -18,11 +18,11 @@ BASE_URL="http://`hostname`:1337/"
 export MONGO_CONNECTION=mongodb://localhost:27017/nightscout
 
 # DISPLAY_UNITS. Choices: mg/dl and mmol. Setting to mmol puts the entire server into mmol mode by default, no further settings needed
-export DISPLAY_UNITS=mmol
-#export DISPLAY_UNITS=mg/dl
+#export DISPLAY_UNITS=mmol
+export DISPLAY_UNITS=mg/dl
 
-export ENABLE="delta direction timeago devicestatus ar2 profile careportal boluscalc food rawbg iob cob bwp cage sage iage treatmentnotify basal pump openaps"
-export DISABLE="upbat errorcodes simplealarms bridge mmconnect loop"
+export ENABLE="delta direction timeago devicestatus ar2 profile careportal boluscalc food rawbg iob cob bwp cage sage iage treatmentnotify basal pump mmconnect openaps"
+export DISABLE="upbat errorcodes simplealarms bridge loop"
 
 export TIME_FORMAT=24
 export NIGHT_MODE=off
