@@ -14,8 +14,6 @@ apt install nodejs -y
 apt install mongodb-server -y
 systemctl enable mongodb.service
 systemctl status mongodb.service
-npm cache clean -f
-npm install npm -g
 curl -o start_nightscout.sh https://raw.githubusercontent.com/viderehh/deploy-nightscout-local-debain/master/start_nightscout.sh
 chmod +rx start_nightscout.sh
 
@@ -33,6 +31,6 @@ echo "and API_SECRET=my_24_characters_or_more_password"
 echo ""
 echo "after that"
 echo "/etc/init.d/nightscout start"
-echo "todo: set mongodb user and db for security resons"
+echo "todo: create mongodb user for security resons"
 echo "maybe you want to change the bind_ip in /etc/mongodb.conf"
 
