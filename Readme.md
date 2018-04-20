@@ -1,7 +1,8 @@
 install nightscout on your own debian webserver (including mongodb) 
 
 git clone https://github.com/viderehh/deploy-nightscout-local-debain  
-deploy-nightscout-local-debain/ns-local-install.sh  
+cd deploy-nightscout-local-debain;chmod +x ns-local-install.sh 
+./ns-local-install.sh  
 
 before start your nightscout  
 edit /opt/start-nightscout.sh  
