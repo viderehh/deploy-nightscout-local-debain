@@ -8,7 +8,7 @@
 useradd scout
 cd /opt/
 apt update && apt upgrade -y
-apt install sudo git rsync curl -y
+apt install sudo git rsync curl software-properties-common -y
 curl -sL https://deb.nodesource.com/setup_9.x | sudo bash -
 apt install nodejs -y
 apt install mongodb-server -y
