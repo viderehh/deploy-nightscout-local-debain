@@ -5,6 +5,9 @@
 #
 #
 
+apt update && apt upgrade -y
+apt install curl rsync locate -y
+
 useradd scout
 cd /opt/
 apt update && apt upgrade -y
