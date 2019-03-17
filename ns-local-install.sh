@@ -12,21 +12,22 @@ useradd scout
 cd /opt/
 apt update && apt upgrade -y
 apt install sudo git rsync curl software-properties-common -y
-curl -sL https://deb.nodesource.com/setup_9.x | sudo bash -
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+#curl -sL https://deb.nodesource.com/setup_9.x | sudo bash - #makes trouble
 apt install nodejs -y
 apt install mongodb-server -y
 systemctl enable mongodb.service
 systemctl status mongodb.service
-curl -o start_nightscout.sh https://raw.githubusercontent.com/viderehh/deploy-nightscout-local-debain/master/start_nightscout.sh
-chmod +rx start_nightscout.sh
 
-git clone https://github.com/nightscout/cgm-remote-monitor.git
+git clone https://github.com/viderehh/cgm-remote-monitor.git
 cd cgm-remote-monitor/
 ./setup.sh
 #
-curl -o https://raw.githubusercontent.com/viderehh/deploy-nightscout-local-debain/master/nightscout
+curl -o https://github.com/viderehh/deploy-nightscout-local-debain/blob/master/nightscout
 mv nightscout /etc/init.d/nightscout
 chmod +x /etc/init.d/nightscout
+mkdir /opt/cgm-remote-monitor/tmp
+touch /opt/cgm-remote-monitor/tmp/cacheBusterToken
 
 echo "edit /opt/start-nightscout.sh"
 echo "change CUSTOM_TITLE=mysitename_without_space"
